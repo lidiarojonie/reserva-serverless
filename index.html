@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Reserva Natural Monte Esmeralda - Santuario de biodiversidad, senderismo ecológico y conservación ambiental.">
+    <meta name="author" content="Reserva Natural Monte Esmeralda">
+
+    <title>Reserva Natural Monte Esmeralda | Santuario de Biodiversidad</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Frameworks & Hoja de Estilos Dedicada -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 1. Top Status Bar (Interactive live status) -->
+    <div class="top-status-bar">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <div class="d-flex align-items-center gap-2">
+                <span class="status-dot"></span>
+                <span><strong>Estado en Tiempo Real:</strong> Reserva Abierta hoy (07:00 - 18:30)</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="bi bi-thermometer-sun text-warning me-1"></i> 22°C Soleado</span>
+                <span><i class="bi bi-shield-check text-success me-1"></i> Aforo: <strong>48% disponible</strong></span>
+                <span class="d-none d-md-inline"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Sendero Central: Óptimo</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <i class="bi bi-tree-fill brand-logo-icon"></i>
+                <div>
+                    <div>MONTE ESMERALDA</div>
+                    <small style="font-size: 0.65rem; font-family: var(--font-body); font-weight: 500; color: var(--text-muted); display: block; margin-top: -4px;">RESERVA NATURAL & BIÓSFERA</small>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-2 text-dark"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#senderos">Senderos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#biodiversidad">Biodiversidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planificador">Planificador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#preguntas">Preguntas</a>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a href="#reservas" class="btn btn-nature-primary btn-sm px-3 py-2">
+                            <i class="bi bi-ticket-perforated"></i> Obtener Pase
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="inicio">
+
+        <!-- 3. Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <div class="hero-badge">
+                            <i class="bi bi-patch-check-fill text-warning"></i> Santuario de Conservación UICN · Cat. II
+                        </div>
+                        <h1 class="hero-title">
+                            Donde la selva ancestral <span>respira en libertad</span>
+                        </h1>
+                        <p class="hero-lead">
+                            Explora más de 14.000 hectáreas de bosques nubosos, cascadas cristalinas y senderos ecológicos balizados. Un refugio vivo donde cada paso protege el planeta.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#reservas" class="btn btn-nature-primary">
+                                <i class="bi bi-qr-code-scan"></i> Pase de Acceso Gratuito
+                            </a>
+                            <a href="#senderos" class="btn btn-nature-outline">
+                                <i class="bi bi-compass"></i> Explorar Senderos
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <!-- Hero Interactive Live Card -->
+                        <div class="hero-live-card">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-success px-3 py-2 rounded-pill">
+                                    <i class="bi bi-broadcast me-1"></i> En directo
+                                </span>
+                                <small class="text-white-50"><i class="bi bi-clock me-1"></i> Actualizado hace 4 min</small>
+                            </div>
+                            <h5 class="fw-bold text-white mb-2">Avistamiento Destacado de Hoy</h5>
+                            <p class="small text-white-50 mb-3">
+                                Ejemplar de <strong>Quetzal Macho</strong> y cría avistados en el mirador del Sendero Las Brumas.
+                            </p>
+                            <div class="p-3 bg-white bg-opacity-10 rounded-3 mb-3">
+                                <div class="row g-2 text-center">
+                                    <div class="col-4">
+                                        <div class="fw-bold fs-5 text-warning">14 km/h</div>
+                                        <div style="font-size: 0.75rem;" class="text-white-50">Viento</div>
+                                    </div>
+                                    <div class="col-4 border-start border-end border-white border-opacity-10">
+                                        <div class="fw-bold fs-5 text-info">65%</div>
+                                        <div style="font-size: 0.75rem;" class="text-white-50">Humedad</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="fw-bold fs-5 text-success">3 (Bajo)</div>
+                                        <div style="font-size: 0.75rem;" class="text-white-50">Índice UV</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between small text-white-50">
+                                <span><i class="bi bi-shield-lock-fill text-warning me-1"></i> Guardabosques en ruta</span>
+                                <a href="#senderos" class="text-warning text-decoration-none fw-semibold">Ver mapa &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Stats Counter Bar -->
+        <div class="container">
+            <div class="stats-section">
+                <div class="row g-4">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">14.200</div>
+                            <div class="stat-label">Hectáreas Protegidas</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">480+</div>
+                            <div class="stat-label">Especies de Fauna y Aves</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">36 km</div>
+                            <div class="stat-label">Senderos Autoguiados</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Energía Solar & Huella Cero</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Interactive Trails Section -->
+        <section class="py-5 mt-4" id="senderos">
+            <div class="container py-4">
+                <div class="section-header">
+                    <span class="section-tag">RUTAS Y RECORRIDOS</span>
+                    <h2 class="section-title">Explora Nuestros Senderos Ecológicos</h2>
+                    <p class="section-subtitle">
+                        Nuestras rutas están diseñadas bajo el estándar de mínimo impacto ambiental. Filtra por dificultad o duración para planificar tu caminata ideal.
+                    </p>
+                </div>
+
+                <!-- Interactive Category Filter -->
+                <div class="filter-btn-group" id="trailFilters">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="bi bi-grid-fill me-1"></i> Todos los Senderos
+                    </button>
+                    <button class="filter-btn" data-filter="easy">
+                        <i class="bi bi-emoji-smile me-1"></i> Familiar (Fácil)
+                    </button>
+                    <button class="filter-btn" data-filter="medium">
+                        <i class="bi bi-compass me-1"></i> Intermedio
+                    </button>
+                    <button class="filter-btn" data-filter="hard">
+                        <i class="bi bi-lightning-charge me-1"></i> Desafío y Cumbre
+                    </button>
+                </div>
+
+                <!-- Trails Grid -->
+                <div class="row g-4" id="trailsGrid">
+                    <!-- Trail 1 -->
+                    <div class="col-lg-4 col-md-6 trail-item" data-category="medium">
+                        <div class="trail-card">
+                            <div class="trail-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80" alt="Cascada del Dragón">
+                                <span class="trail-badge-difficulty difficulty-medium">Moderado</span>
+                                <span class="trail-meta-badge"><i class="bi bi-stopwatch"></i> 2h 15m</span>
+                            </div>
+                            <div class="trail-card-body">
+                                <h3 class="trail-title">Sendero Cascada del Dragón</h3>
+                                <p class="trail-desc">
+                                    Caminata a través del bosque tropical húmedo que culmina en un impresionante salto natural de agua de 45 metros con piscina biológica habilitada.
+                                </p>
+                                <div class="trail-specs">
+                                    <div class="trail-spec-item">
+                                        <i class="bi bi-rulers"></i>
+                                        <span>4.8 km</span>
+                                    </div>
+                                    <div class="trail-spec-item">
+                                        <i class="bi bi-arrow-up-right"></i>
+                                        <span>+180 m desnivel</span>
+                                    </div>
+                                    <div class="trail-spec-item">
+                                        <i class="bi bi-water"></i>
+                                        <span>2 Puntos agua</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-dark btn-sm rounded-pill w-100" onclick="showTrailModal('Cascada del Dragón', '4.8 km', '2 horas 15 min', 'Moderado (+180m)', 'Agua potable, mirador de fotografía, calzado antideslizante obligatorio.', 'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80')">
+                                    <i class="bi bi-info-circle me-1"></i> Ver Ficha Técnica
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trail 2 -->
+                    <div class="col-lg-4 col-md-6 trail-item" data-category="easy">
+                        <div class="trail-card">
+                            <div class="trail-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Paseo de los Helechos Gigantes">
+                                <span class="trail-badge-difficulty difficulty-easy">Familiar</span>
+                                <span class="trail-meta-badge"><i class="bi bi-stopwatch"></i> 50 min</span>
+                            </div>
+                            <div class="trail-card-body">
+                                <h3 class="trail-title">Paseo de los Helechos Gigantes</h3>
+                                <p class="trail-desc">
+                                    Sendero entarimado 100% accesible, sombreado por helechos arbóreos prehistóricos. Ideal para niños, adultos mayores y fotografía macro.
+                                </p>
+                                <div class="trail-specs">
+                                    <div class="trail-spec-item">
+                                        <i class="bi bi-rulers"></i>
+                                        <span>1.6 km</span>
+                                    </div>
+                                    <div class="trail-spec-item">
+                                        <i class="bi bi-arrow-up-right"></i>
+                                        <span>+35 m desnivel</span>
+                                    </div>
+                                    <div class="trail-spec-item">
+                                        <i class="bi bi-universal-access"></i>
+                                        <span>Accesible</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-dark btn-sm rounded-pill w-100" onclick="showTrailModal('Paseo de los Helechos', '1.6 km', '50 minutos', 'Baja / Familiar', 'Sendero entarimado, bancos de descanso cada 200m, apto para cochecitos.', 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80')">
+                                    <i class="bi bi-info-circle me-1"></i> Ver Ficha Técnica
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trail 3 -->
+                    <div class="col-lg-4 col-md-6 trail-item" data-category="hard">
+                        <div class="trail-card">
+                            <div class="trail-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Ruta Mirador de los Cóndores">
+                                <span class="trail-badge-difficulty difficulty-hard">Desafío</span>
+                                <span class="trail-meta-badge"><i class="bi bi-stopwatch"></i> 4h 30m</span>
+                            </div>
+                            <div class="trail-card-body">
+                                <h3 class="trail-title">Ruta Mirador de los Cóndores</h3>
+                                <p class="trail-desc">
+                                    Ascenso exigente que cruza el bosque nuboso hasta la cumbre a 2.150 msnm. Vistas panorámicas infinitas y avistamiento de grandes rapaces.
+                                </p>
+                                <div class="trail-specs">
+                                    <div class="trail-spec-item">
+                                        <i class="bi bi-rulers"></i>
+                                        <span>9.2 km</span>
+                                    </div>
+                                    <div class="trail-spec-item">
+                                        <i class="bi bi-arrow-up-right"></i>
+                                        <span>+640 m desnivel</span>
+                                    </div>
+                                    <div class="trail-spec-item">
+                                        <i class="bi bi-shield-shaded"></i>
+                                        <span>Guía sug.</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-dark btn-sm rounded-pill w-100" onclick="showTrailModal('Mirador de los Cóndores', '9.2 km', '4 horas 30 min', 'Alta / Experto', 'Requiere bastones de trekking, 2L de agua por persona, registro previo obligatorio.', 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80')">
+                                    <i class="bi bi-info-circle me-1"></i> Ver Ficha Técnica
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Biodiversity Showcase & Soundscape -->
+        <section class="py-5 bg-white" id="biodiversidad">
+            <div class="container py-4">
+                <div class="row align-items-center mb-5 g-4">
+                    <div class="col-lg-7">
+                        <span class="section-tag">FAUNA & FLORA SILVESTRE</span>
+                        <h2 class="section-title">Especies Protegidas en su Hábitat Natural</h2>
+                        <p class="section-subtitle">
+                            Monte Esmeralda alberga más del 4% de la biodiversidad del continente. Nuestros programas de bioseguridad y monitoreo satelital protegen especies en peligro crítico.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Ambient Soundscape Box -->
+                    <div class="col-lg-5">
+                        <div class="soundscape-box" id="soundscapeCard">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h5 class="fw-bold mb-1"><i class="bi bi-soundwave me-2"></i>Paisaje Sonoro Vivo</h5>
+                                    <small class="text-white-50">Sintetizador acústico del bosque</small>
+                                </div>
+                                <div class="soundscape-waves">
+                                    <div class="sound-wave-bar"></div>
+                                    <div class="sound-wave-bar"></div>
+                                    <div class="sound-wave-bar"></div>
+                                    <div class="sound-wave-bar"></div>
+                                    <div class="sound-wave-bar"></div>
+                                </div>
+                            </div>
+                            <p class="small text-white-50 mb-3">
+                                Presiona para activar el simulador ambiental de cantos de aves y suave brisa del dosel forestal.
+                            </p>
+                            <button class="btn btn-nature-primary w-100 py-2" id="toggleSoundBtn" onclick="toggleForestAudio()">
+                                <i class="bi bi-play-circle-fill fs-5" id="soundIcon"></i>
+                                <span id="soundText">Reproducir Sonido del Bosque</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wildlife Cards Grid -->
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="wildlife-card">
+                            <div class="wildlife-img-container">
+                                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=80" alt="Jaguar">
+                                <span class="wildlife-badge">En Protección</span>
+                            </div>
+                            <div class="p-3">
+                                <h5 class="fw-bold fs-6 mb-1">Jaguarundi & Felinos</h5>
+                                <p class="text-muted small mb-0">Monitoreados mediante 64 cámaras trampa nocturnas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="wildlife-card">
+                            <div class="wildlife-img-container">
+                                <img src="https://images.unsplash.com/photo-1579273166152-d725a4e2b755?auto=format&fit=crop&w=600&q=80" alt="Aves Tropicales">
+                                <span class="wildlife-badge">Avistable</span>
+                            </div>
+                            <div class="p-3">
+                                <h5 class="fw-bold fs-6 mb-1">Quetzal & Colibríes</h5>
+                                <p class="text-muted small mb-0">Más de 240 especies migratorias documentadas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="wildlife-card">
+                            <div class="wildlife-img-container">
+                                <img src="https://images.unsplash.com/photo-1535083783855-76ae62b2914e?auto=format&fit=crop&w=600&q=80" alt="Anfibios">
+                                <span class="wildlife-badge">Bioindicador</span>
+                            </div>
+                            <div class="p-3">
+                                <h5 class="fw-bold fs-6 mb-1">Rana de Ojos Rojos</h5>
+                                <p class="text-muted small mb-0">Habitante emblemático de lagunas y bromelias altas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="wildlife-card">
+                            <div class="wildlife-img-container">
+                                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="Flora Tropical">
+                                <span class="wildlife-badge">Endémica</span>
+                            </div>
+                            <div class="p-3">
+                                <h5 class="fw-bold fs-6 mb-1">Orquídeas Milenarias</h5>
+                                <p class="text-muted small mb-0">Jardín botánico vivo con 1.100 variedades clasificadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Interactive Visit Planner Calculator -->
+        <section class="py-5" id="planificador">
+            <div class="container py-4">
+                <div class="section-header">
+                    <span class="section-tag">HERRAMIENTA INTERACTIVA</span>
+                    <h2 class="section-title">Planifica tu Experiencia en la Reserva</h2>
+                    <p class="section-subtitle">
+                        Selecciona el perfil de tu visita para obtener al instante una recomendación personalizada de senderos y consejos de equipamiento.
+                    </p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="calculator-card">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold"><i class="bi bi-people-fill text-success me-1"></i> Tipo de Grupo</label>
+                                    <select class="form-select form-select-lg" id="calcGroup" onchange="calculateVisit()">
+                                        <option value="family">Familia con niños</option>
+                                        <option value="couple">Pareja / Amigos</option>
+                                        <option value="solo" selected>Caminante Solo / Senderista</option>
+                                        <option value="photographers">Fotógrafos de Naturaleza</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold"><i class="bi bi-clock-history text-success me-1"></i> Tiempo Disponible</label>
+                                    <select class="form-select form-select-lg" id="calcTime" onchange="calculateVisit()">
+                                        <option value="half">Medio día (2 a 3 horas)</option>
+                                        <option value="full" selected>Día completo (4 a 6 horas)</option>
+                                        <option value="twilight">Visita Atardecer / Crepúsculo</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold"><i class="bi bi-activity text-success me-1"></i> Nivel Físico</label>
+                                    <select class="form-select form-select-lg" id="calcFitness" onchange="calculateVisit()">
+                                        <option value="low">Tranquilo / Paseo</option>
+                                        <option value="medium" selected>Habituado a caminar</option>
+                                        <option value="high">Avanzado / Excursionista</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Calculation Result -->
+                            <div class="calc-result-box" id="calcResult">
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <span class="badge bg-success p-2 fs-6"><i class="bi bi-check2-circle me-1"></i> Plan Recomendado</span>
+                                    <h4 class="fw-bold mb-0 text-success" id="resultTrailTitle">Sendero Cascada del Dragón + Mirador Intermedio</h4>
+                                </div>
+                                <p class="mb-2 text-dark" id="resultDescription">
+                                    Excelente combinación para tu estancia de día completo. Disfrutarás de sombra natural, cascadas y puntos panorámicos sin exigencia técnica extrema.
+                                </p>
+                                <div class="row g-2 pt-2 border-top border-success border-opacity-25 small text-muted">
+                                    <div class="col-sm-4"><i class="bi bi-alarm me-1 text-success"></i> <strong>Hora óptima de inicio:</strong> <span id="resultTime">08:00 AM</span></div>
+                                    <div class="col-sm-4"><i class="bi bi-backpack me-1 text-success"></i> <strong>Equipamiento clave:</strong> <span id="resultGear">Calzado senderismo + 1.5L agua</span></div>
+                                    <div class="col-sm-4"><i class="bi bi-sun me-1 text-success"></i> <strong>Punto fotográfico:</strong> <span id="resultSpot">Mirador del Velo</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Registration Form Section (NOMBRE y EMAIL) -->
+        <section class="registration-section" id="reservas">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-11 col-xl-10">
+                        <div class="registration-card">
+                            <div class="row g-0">
+                                <!-- Left Info Column -->
+                                <div class="col-lg-5 reg-info-column">
+                                    <div>
+                                        <span class="badge bg-success text-white px-3 py-2 rounded-pill mb-3">
+                                            <i class="bi bi-tree me-1"></i> Entrada Gratuita & Regulada
+                                        </span>
+                                        <h3 class="fw-bold text-white mb-3">Obtén tu Pase Digital & Guía Interactiva</h3>
+                                        <p class="text-white-50 mb-4">
+                                            Para proteger el ecosistema mantenemos un aforo diario controlado. Regístrate para recibir al instante tu código QR de acceso y la guía topográfica de senderos.
+                                        </p>
+
+                                        <div class="benefit-item">
+                                            <div class="benefit-icon"><i class="bi bi-qr-code"></i></div>
+                                            <div>
+                                                <h6 class="fw-bold text-white mb-1">Pase Rápido con Código QR</h6>
+                                                <p class="small text-white-50 mb-0">Acceso sin colas directamente desde tu móvil.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="benefit-item">
+                                            <div class="benefit-icon"><i class="bi bi-map"></i></div>
+                                            <div>
+                                                <h6 class="fw-bold text-white mb-1">Mapa Topográfico Offline</h6>
+                                                <p class="small text-white-50 mb-0">Navega por los senderos sin necesidad de cobertura.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="benefit-item">
+                                            <div class="benefit-icon"><i class="bi bi-bell"></i></div>
+                                            <div>
+                                                <h6 class="fw-bold text-white mb-1">Alertas de Avistamientos</h6>
+                                                <p class="small text-white-50 mb-0">Notificaciones de fauna activa durante tu visita.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pt-4 border-top border-white border-opacity-10 small text-white-50">
+                                        <i class="bi bi-shield-check text-success me-1"></i> Compromiso Cero Papel · 100% Digital y Ecológico
+                                    </div>
+                                </div>
+
+                                <!-- Right Form Column (NOMBRE y EMAIL) -->
+                                <div class="col-lg-7 reg-form-column">
+                                    <div class="mb-4">
+                                        <h4 class="fw-bold text-dark mb-1">Solicitar Pase de Entrada</h4>
+                                        <p class="text-muted small">
+                                            Rellena únicamente tu nombre y correo electrónico para confirmar tu registro.
+                                        </p>
+                                    </div>
+
+                                    <!-- FORMULARIO INTEGRADO CON BACKEND (Clase ebook-download-form y campos ebook-form-name / ebook-email) -->
+                                    <form class="custom-form ebook-download-form" id="reserve-form">
+                                        
+                                        <!-- Campo NOMBRE -->
+                                        <div class="form-floating mb-3">
+                                            <input type="text" name="ebook-form-name" id="ebook-form-name" class="form-control"
+                                                placeholder="Tu Nombre Completo" required>
+                                            <label for="ebook-form-name"><i class="bi bi-person me-2"></i>Nombre Completo</label>
+                                        </div>
+
+                                        <!-- Campo EMAIL -->
+                                        <div class="form-floating mb-4">
+                                            <input type="email" name="ebook-email" id="ebook-email" class="form-control"
+                                                placeholder="nombre@correo.com" pattern="[^ @]*@[^ @]*" required>
+                                            <label for="ebook-email"><i class="bi bi-envelope me-2"></i>Correo Electrónico</label>
+                                        </div>
+
+                                        <!-- Botón de Envío -->
+                                        <button type="submit" class="btn btn-submit-booking w-100" id="submitBtn">
+                                            <i class="bi bi-send-fill me-2"></i> Obtener Pase y Guía de Senderos
+                                        </button>
+
+                                        <!-- Estado / Feedback visual -->
+                                        <div id="formFeedback" class="mt-3 text-center small text-muted">
+                                            <i class="bi bi-lock-fill text-success me-1"></i> Tus datos se procesan de forma segura según el RGPD.
+                                        </div>
+                                    </form>
+
+                                    <!-- Testimonial / Nota extra -->
+                                    <div class="mt-4 pt-3 border-top d-flex align-items-center gap-3">
+                                        <div class="badge bg-light text-dark p-2 rounded-circle fs-4">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        </div>
+                                        <p class="small text-muted mb-0">
+                                            <em>«El acceso mediante QR y la guía interactiva offline nos permitió descubrir miradores secretos sin perdernos.»</em>
+                                            <br><strong>— Lucía y Marcos</strong>, visitantes verificados.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Interactive FAQs Accordion -->
+        <section class="py-5 bg-white" id="preguntas">
+            <div class="container py-4">
+                <div class="section-header">
+                    <span class="section-tag">RESOLUCIÓN DE DUDAS</span>
+                    <h2 class="section-title">Preguntas Frecuentes</h2>
+                    <p class="section-subtitle">
+                        Todo lo que necesitas saber antes de iniciar tu recorrido en la reserva natural.
+                    </p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        ¿El acceso a la reserva tiene algún coste?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        No, el acceso a los senderos autoguiados es 100% gratuito. No obstante, por motivos de preservación del ecosistema y control de capacidad biológica, es indispensable registrarse previamente con tu nombre y correo para obtener el pase de aforo.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        ¿Se permite el ingreso con animales de compañía?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Únicamente se admiten perros de asistencia y lazarillos debidamente acreditados. Para proteger a las aves de suelo y evitar la transmisión de patógenos a la fauna silvestre, las mascotas domésticas no están permitidas en los senderos interiores.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        ¿Qué vestimenta y calzado son obligatorios?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Es imprescindible calzado cerrado con suela adherente (zapatillas de trail running o botas de montaña). Recomendamos llevar chubasquero ligero, gorra, crema solar biodegradable y mínimo 1,5 litros de agua por persona.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        ¿Qué ocurre si llueve el día de mi visita?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        El bosque nuboso es naturalmente húmedo y la lluvia ligera es parte del encanto del ecosistema. En caso de temporal o alerta meteorológica, el cuerpo de guardabosques cierra preventivamente los senderos altos y envía un aviso automático por correo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 10. Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <i class="bi bi-tree-fill fs-2 text-success"></i>
+                        <h4 class="text-white mb-0 brand-font fs-5">MONTE ESMERALDA</h4>
+                    </div>
+                    <p class="small text-muted mb-4">
+                        Santuario ecológico dedicado a la conservación de especies nativas, la reforestación activa y el ecoturismo responsable.
+                    </p>
+                    <div>
+                        <a href="#" class="footer-social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h5 class="footer-title">Explorar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#senderos" class="footer-link">Rutas y Senderos</a></li>
+                        <li><a href="#biodiversidad" class="footer-link">Fauna y Flora</a></li>
+                        <li><a href="#planificador" class="footer-link">Calculador de Rutas</a></li>
+                        <li><a href="#reservas" class="footer-link">Pases Digitales</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h5 class="footer-title">Conservación</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Biología y Ciencia</a></li>
+                        <li><a href="#" class="footer-link">Reforestación 2026</a></li>
+                        <li><a href="#" class="footer-link">Voluntariado</a></li>
+                        <li><a href="#" class="footer-link">Normas del Parque</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-title">Centro de Visitantes</h5>
+                    <p class="small text-muted mb-2">
+                        <i class="bi bi-geo-alt-fill text-danger me-2"></i> Carretera del Valle km 14, Sector Los Pinos
+                    </p>
+                    <p class="small text-muted mb-2">
+                        <i class="bi bi-clock-fill text-warning me-2"></i> Abierto todos los días de 07:00 a 18:30
+                    </p>
+                    <p class="small text-muted mb-0">
+                        <i class="bi bi-telephone-fill text-success me-2"></i> Emergencias Guardabosques: +34 900 800 200
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-wrap justify-content-between align-items-center small text-muted">
+                <div>&copy; 2026 Reserva Natural Monte Esmeralda. Todos los derechos reservados.</div>
+                <div class="d-flex gap-3 mt-2 mt-sm-0">
+                    <a href="#" class="text-muted text-decoration-none">Política Ambiental</a>
+                    <a href="#" class="text-muted text-decoration-none">Términos de Visita</a>
+                    <a href="#" class="text-muted text-decoration-none">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Ficha Técnica Sendero -->
+    <div class="modal fade" id="trailModal" tabindex="-1" aria-labelledby="trailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="trailModalLabel">Ficha Técnica</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <img id="modalTrailImg" src="" class="img-fluid rounded-3 mb-3 w-100" style="height: 180px; object-fit: cover;" alt="Trail">
+                    <div class="row g-2 mb-3">
+                        <div class="col-6 p-2 bg-light rounded text-center">
+                            <small class="text-muted d-block">Distancia</small>
+                            <strong id="modalTrailDist" class="text-dark">-</strong>
+                        </div>
+                        <div class="col-6 p-2 bg-light rounded text-center">
+                            <small class="text-muted d-block">Duración estimada</small>
+                            <strong id="modalTrailTime" class="text-dark">-</strong>
+                        </div>
+                        <div class="col-6 p-2 bg-light rounded text-center">
+                            <small class="text-muted d-block">Nivel</small>
+                            <strong id="modalTrailDiff" class="text-dark">-</strong>
+                        </div>
+                        <div class="col-6 p-2 bg-light rounded text-center">
+                            <small class="text-muted d-block">Estado hoy</small>
+                            <strong class="text-success"><i class="bi bi-check-circle-fill"></i> Abierto</strong>
+                        </div>
+                    </div>
+                    <h6 class="fw-bold mb-2">Recomendaciones del Guardabosque:</h6>
+                    <p id="modalTrailAdvice" class="small text-muted mb-4">-</p>
+                    <a href="#reservas" class="btn btn-nature-primary w-100" data-bs-dismiss="modal">
+                        <i class="bi bi-ticket-perforated me-1"></i> Reservar Acceso para este Sendero
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        // 1. Interactive Trail Filtering
+        document.querySelectorAll('#trailFilters .filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#trailFilters .filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+
+                document.querySelectorAll('.trail-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 2. Trail Detail Modal Trigger
+        let trailBootstrapModal;
+        document.addEventListener('DOMContentLoaded', () => {
+            trailBootstrapModal = new bootstrap.Modal(document.getElementById('trailModal'));
+        });
+
+        function showTrailModal(name, dist, time, diff, advice, img) {
+            document.getElementById('trailModalLabel').innerText = name;
+            document.getElementById('modalTrailDist').innerText = dist;
+            document.getElementById('modalTrailTime').innerText = time;
+            document.getElementById('modalTrailDiff').innerText = diff;
+            document.getElementById('modalTrailAdvice').innerText = advice;
+            document.getElementById('modalTrailImg').src = img;
+            trailBootstrapModal.show();
+        }
+
+        // 3. Interactive Web Audio API Forest Sound Synthesizer
+        let audioCtx = null;
+        let isPlayingAudio = false;
+        let windNode = null;
+        let birdInterval = null;
+
+        function toggleForestAudio() {
+            const card = document.getElementById('soundscapeCard');
+            const icon = document.getElementById('soundIcon');
+            const text = document.getElementById('soundText');
+
+            if (!isPlayingAudio) {
+                try {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    if (!audioCtx) audioCtx = new AudioContext();
+                    if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                    // Generate gentle wind noise buffer
+                    const bufferSize = audioCtx.sampleRate * 2;
+                    const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+                    const output = noiseBuffer.getChannelData(0);
+                    let lastOut = 0.0;
+                    for (let i = 0; i < bufferSize; i++) {
+                        const white = Math.random() * 2 - 1;
+                        output[i] = (lastOut + (0.02 * white)) / 1.02;
+                        lastOut = output[i];
+                        output[i] *= 0.15; // Soft volume
+                    }
+
+                    const whiteNoise = audioCtx.createBufferSource();
+                    whiteNoise.buffer = noiseBuffer;
+                    whiteNoise.loop = true;
+
+                    // Lowpass filter for deep wind sound
+                    const filter = audioCtx.createBiquadFilter();
+                    filter.type = 'lowpass';
+                    filter.frequency.setValueAtTime(320, audioCtx.currentTime);
+
+                    const gainNode = audioCtx.createGain();
+                    gainNode.gain.setValueAtTime(0.08, audioCtx.currentTime);
+
+                    whiteNoise.connect(filter);
+                    filter.connect(gainNode);
+                    gainNode.connect(audioCtx.destination);
+                    whiteNoise.start(0);
+                    windNode = { whiteNoise, gainNode };
+
+                    // Simulated periodic bird chirps
+                    birdInterval = setInterval(() => {
+                        if (!isPlayingAudio || !audioCtx) return;
+                        playBirdChirp();
+                    }, 2800);
+
+                    isPlayingAudio = true;
+                    card.classList.add('playing');
+                    icon.className = 'bi bi-stop-circle-fill fs-5 text-warning';
+                    text.innerText = 'Pausar Sonido del Bosque';
+                } catch (e) {
+                    console.log('Audio init error:', e);
+                }
+            } else {
+                if (windNode) {
+                    try { windNode.whiteNoise.stop(); } catch (e) {}
+                    windNode = null;
+                }
+                if (birdInterval) clearInterval(birdInterval);
+                isPlayingAudio = false;
+                card.classList.remove('playing');
+                icon.className = 'bi bi-play-circle-fill fs-5';
+                text.innerText = 'Reproducir Sonido del Bosque';
+            }
+        }
+
+        function playBirdChirp() {
+            if (!audioCtx) return;
+            const osc = audioCtx.createOscillator();
+            const chirpGain = audioCtx.createGain();
+            const now = audioCtx.currentTime;
+
+            osc.type = 'sine';
+            const baseFreq = 2200 + Math.random() * 800;
+            osc.frequency.setValueAtTime(baseFreq, now);
+            osc.frequency.exponentialRampToValueAtTime(baseFreq + 600, now + 0.1);
+            osc.frequency.exponentialRampToValueAtTime(baseFreq - 200, now + 0.22);
+
+            chirpGain.gain.setValueAtTime(0.03, now);
+            chirpGain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+
+            osc.connect(chirpGain);
+            chirpGain.connect(audioCtx.destination);
+            osc.start(now);
+            osc.stop(now + 0.26);
+        }
+
+        // 4. Interactive Visit Calculator
+        function calculateVisit() {
+            const group = document.getElementById('calcGroup').value;
+            const time = document.getElementById('calcTime').value;
+            const fitness = document.getElementById('calcFitness').value;
+
+            const title = document.getElementById('resultTrailTitle');
+            const desc = document.getElementById('resultDescription');
+            const resTime = document.getElementById('resultTime');
+            const gear = document.getElementById('resultGear');
+            const spot = document.getElementById('resultSpot');
+
+            if (group === 'family' || fitness === 'low') {
+                title.innerText = 'Paseo de los Helechos Gigantes (Ruta Sensorial)';
+                desc.innerText = 'Itinerario 100% plano, con paneles interactivos de flora y zonas de sombra continua. Perfecto para toda la familia.';
+                resTime.innerText = '09:30 AM';
+                gear.innerText = 'Calzado deportivo, repelente ecológico y agua.';
+                spot.innerText = 'Puente de Madera sobre el Arroyo.';
+            } else if (fitness === 'high' && time === 'full') {
+                title.innerText = 'Gran Travesía: Bosque Nuboso & Mirador de los Cóndores';
+                desc.innerText = 'Ruta de alta exigencia física y recompensas escénicas inolvidables sobre el dosel de la reserva.';
+                resTime.innerText = '07:00 AM';
+                gear.innerText = 'Botas de caña media, bastones de trekking y 2L de agua.';
+                spot.innerText = 'Cumbre Rocosa a 2.150m.';
+            } else if (group === 'photographers') {
+                title.innerText = 'Ruta del Amanecer en Laguna Esmeralda';
+                desc.innerText = 'Puntos estratégicos para captar niebla matutina, reflejos en el agua y aves en horario pico de actividad.';
+                resTime.innerText = '06:30 AM';
+                gear.innerText = 'Trípode ligero, funda impermeable y teleobjetivo.';
+                spot.innerText = 'Muelle de Observación Ornitológica.';
+            } else {
+                title.innerText = 'Sendero Cascada del Dragón + Mirador Intermedio';
+                desc.innerText = 'Excelente equilibrio entre ejercicio estimulante, sombra natural de bosque tropical y baño en pozas naturales.';
+                resTime.innerText = '08:30 AM';
+                gear.innerText = 'Zapatillas de trail, toalla pequeña y muda de recambio.';
+                spot.innerText = 'Salto de Agua Principal (45m).';
+            }
+        }
+    </script>
+
+    <!-- Conexión del Ebook con nuestra API (API Gateway + DynamoDB) -->
+    <script src="js/api.js"></script>
+
+</body>
+
+</html>
+
